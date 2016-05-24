@@ -18,6 +18,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+- (IBAction)valueChanged:(UIDatePicker *)sender {
+    NSDateFormatter *format = [[NSDateFormatter alloc]init];
+    [format setDateFormat:@"yyyy/M/d HH:mm:ss"];
+    NSLog(@"设置的时间是%@",[format stringFromDate:sender.date]);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
